@@ -1,0 +1,39 @@
+#include <stdio.h>
+void sort1(int n)
+{
+	int i;
+	for(i=1;i<=n;i++)
+	{
+		if(i%n!=0) printf("%d",i);
+	}
+}
+void sort2(int n)
+{
+	int i;
+	for(i=1;i<=n;i++)
+	{
+		if(i%n==0) printf("%d",i);
+	}
+}
+
+
+
+
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int i,j,c[100];
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&c[i]);
+		
+	}
+	for(i=0;i<n;i++){
+		sort1(c[i]);
+		printf("\n");
+		sort2(c[i]);
+		printf("\n");
+	}
+	return 0;
+}
