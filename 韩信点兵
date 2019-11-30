@@ -1,0 +1,16 @@
+/*a，b，c都是多出来的人数，即a是总人数整除3后剩下的人数，而b是总人数整除5后剩下的人数， b则总人数整除7后剩下的人数。
+从10--100一个一个去试，直到合适的就是最小的*/ 
+#include<stdio.h>
+ int main()
+ { int a,b,c;
+  int i; 
+  scanf("%d %d %d",&a,&b,&c);
+   for(i=10;i<=100;i++) 
+   {	if(i%3==a&&i%5==b&&i%7==c) 
+		{
+			printf("%d\n",i); break;
+		} 
+   } 
+   if(i>100) printf("No answer\n");
+    return 0; 
+ }
