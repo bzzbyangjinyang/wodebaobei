@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<math.h> 
+int main()
+{
+	int n,m;
+	scanf("%d",&n);
+	while(n--)
+	{
+		int a,i=0;
+		scanf("%d",&m);
+		a=m;
+		while(a!=0)
+		{
+			a=m/10;//求0 在哪从而省去0
+			i++;
+		}	
+		int c;
+		c=pow(10,i-1);//n-1位数
+		printf("%d\n",m%c);
+	}	
+	
+	
+	
+	return 0;
+}
+//大佬做法*跳过第一位数输入和回车
+#include<cstdio>
+int main()
+{
+    int n,m;
+    scanf("%d",&n);
+    while(n--)
+    {
+        scanf(" %*c%d",&m);
+        printf("%d\n",m);
+    }
+     return 0;
+}
