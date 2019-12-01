@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	while(a)
+	{
+		scanf("%d %d",&a,&b);
+		int ge,shi,bai,n,m,i;
+		ge=a%10;
+		shi=a/10%10;
+		bai=a/100;
+		n=a%10;
+		m=a/10%10;
+		i=a/100;
+		int flag=0;
+		if(ge+n>10)
+		{
+			flag++;
+			if(shi+1+m>10)flag++;
+			if(bai+i+1>10)flag++;
+		 } 
+		 else
+		 {
+		 	if(shi+m>10)
+			 {
+			 	flag++;
+			 	if(bai+i+1>10)flag++;
+			 }
+			else 
+			{
+				if(bai+i+1>10)flag++;
+			}
+		 }
+		
+		printf("%d",flag);	
+		
+	}
+	
+	return 0;
+ } 
