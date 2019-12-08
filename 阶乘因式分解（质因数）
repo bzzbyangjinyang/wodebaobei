@@ -1,0 +1,24 @@
+#include <stdio.h>
+ // 质因数能整除给定整数的质数 
+int fun(int n,int m)
+{
+	if(!(n/m))
+	{
+		return 0;
+	}
+	else
+	{
+		return fun(n/m,m) + n/m;      // 递归 
+	}
+}
+int main(void)
+{
+	int n,m,k;
+	scanf("%d",&n);
+	while(n--)
+	{
+		scanf("%d%d",&m,&k);
+		printf("%d\n",fun(m,k));
+	}
+	return 0;
+}
